@@ -10,3 +10,4 @@ python-social-auth
 algoliasearch
 rq
 pusher
+sendgrid
