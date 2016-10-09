@@ -1,8 +1,8 @@
 # Pusher
 # 
 
-#DB
-DB_USER_NAME = "db"
+# DB DOCKER 
+DB_HOST = "db"
 DB_PORT = "5432"
 DB_NAME = "postgres"
 DB_USER = "postgres"
