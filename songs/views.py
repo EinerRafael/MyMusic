@@ -55,8 +55,8 @@ class SongsCrud(APIView):
 class SongsSearch(APIView):
 
     def get(self, request):
-        text = request.GET['q']
-        if len(text) == 0:
+        text = request.GET.get('q')
+        if text is None:
             return Response({"error": "Se necesita criterios de busqueda"}, status=status.HTTP_400_BAD_REQUEST)
         resp = algolia.search(ALGOLIA_INDEX_SOUNDS, text)
         return Response(resp)
