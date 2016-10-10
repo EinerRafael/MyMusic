@@ -20,10 +20,9 @@ def send_notification_ratesound(user_id, song_id, rate):
 @job('default', connection=redis_conn)
 def send_data_to_algolia(index, data):
     """
-    Envia una notificaion cuando se califica una cancion
-    :param user_id: Usuario a notificar
-    :param song_id: Cancion calificada
-    :param rate: Calificacion data por el usuario
-    :return:
+    Agrega un objeto a Algolia
+    :param index: Nombre del indice a alimentar
+    :param data: Diccionario Data a indexar
+    :return: AlgoliaResponse
     """
     return algolia.save_object(index=index, data=data)
