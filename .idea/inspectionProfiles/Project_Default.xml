@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="11">
+          <list size="13">
             <item index="0" class="java.lang.String" itemvalue="pusher" />
             <item index="1" class="java.lang.String" itemvalue="djangorestframework-jwt" />
             <item index="2" class="java.lang.String" itemvalue="python-social-auth" />
@@ -16,6 +16,8 @@
             <item index="8" class="java.lang.String" itemvalue="algoliasearch" />
             <item index="9" class="java.lang.String" itemvalue="django-extensions" />
             <item index="10" class="java.lang.String" itemvalue="rq" />
+            <item index="11" class="java.lang.String" itemvalue="redis" />
+            <item index="12" class="java.lang.String" itemvalue="django-rq" />
           </list>
         </value>
       </option>

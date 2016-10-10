@@ -20,3 +20,8 @@ ALGOLIA_INDEX_SOUNDS = "songs"
 # SendGrid
 SENDGRID_API_KEY = "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"
 SENDGRID_SENDER = 'einper40@gmail.com'
+
+
+# Rq
+REDIS_HOST = "redis"
+REDIS_PORT = 6379

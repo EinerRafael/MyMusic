@@ -11,3 +11,5 @@ algoliasearch
 rq
 pusher
 sendgrid
+redis
+django-rq

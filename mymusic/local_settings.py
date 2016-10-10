@@ -12,6 +12,20 @@ DATABASES = {
     }
 }
 
+RQ_QUEUES = {
+    'default': {
+        'HOST': REDIS_HOST,
+        'PORT': REDIS_PORT,
+        'DB': 1,
+        'DEFAULT_TIMEOUT': 360,
+    },
+    'low': {
+        'HOST': REDIS_HOST,
+        'PORT': REDIS_PORT,
+        'DB': 1,
+    }
+}
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -39,3 +53,4 @@ AUTHENTICATION_BACKENDS = (
     'social.backends.yahoo.YahooOpenId',
     'django.contrib.auth.backends.ModelBackend',
 )
+

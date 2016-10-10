@@ -27,6 +27,7 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^django-rq/', include('django_rq.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^api/token-auth/', obtain_jwt_token),
     url(r'', include('social.apps.django_app.urls', namespace='social')),

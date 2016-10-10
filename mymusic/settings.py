@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
     'rest_framework',
-    'users'
+    'django_rq',
+    'users',
+    'songs'
 ]
 
 MIDDLEWARE = [

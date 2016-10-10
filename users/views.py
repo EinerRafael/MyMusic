@@ -5,6 +5,7 @@ from rest_framework import status
 
 from .models import User
 from .serializers import UserSerializer
+from .tasks import send_welcome_email
 from django.contrib.auth.models import User as DUser
 from utilities import sender_email
 
@@ -27,14 +28,13 @@ class UsersCrud(APIView):
         {
             "first_name": "Einer",
             "last_name": "Perez",
-            "email": "some@mail.com",
+            "email": "einper40@gmail.com",
             "password": "Linked",
             "image": "None"
         }
         :param request: Por defecto Django Request
         :return: Response Object Django
         """
-        print(request.data)
         serializer = UserSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -45,6 +45,6 @@ class UsersCrud(APIView):
         user_d = DUser.objects.create_user(user_new.email, user_new.email, password)
         user_d.last_name = user_new.last_name
         user_d.save()
-        sender_email.send_email(user_new.email, "Bienvenido a MyMusic", "<h1>Bienvendio a My Music</h1>")
+        send_welcome_email.delay(user_new.email)
         return Response(user_new.serialize(), status=status.HTTP_201_CREATED)
 
