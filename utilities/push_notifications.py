@@ -1,7 +1,7 @@
 from pusher import pusher
 from mymusic.constants import *
 
-class push_notifications():
+class PushNotifications():
 
     def __init__(self):
         """

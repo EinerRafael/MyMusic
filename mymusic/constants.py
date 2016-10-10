@@ -4,7 +4,9 @@ PUSHER_APP_KEY = "574fe9df791589ba8b69"
 PUSHER_APP_SECRET = "7f08647e1f25d52dd90c"
 PUSHER_APP_SSL = True
 PUSHER_PUBLIC_CHANNEL = "mymusic_public"
-PUSHER_USER_CHANNEL = "mymusic_{0}"
+PUSHER_USER_CHANNEL = "mymusic_user_{user_id}"
+PUSHER_RATE_SOUND = "rate_sound"
+PUSHER_RATE_PLAYLIST = "rate_playlist"
 
 # DB DOCKER 
 DB_HOST = "db"

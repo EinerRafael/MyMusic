@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_rq',
     'users',
-    'songs'
+    'songs',
+    'playlist',
 ]
 
 MIDDLEWARE = [

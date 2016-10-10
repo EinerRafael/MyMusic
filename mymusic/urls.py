@@ -31,7 +31,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/token-auth/', obtain_jwt_token),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
-    url(r'', include('users.urls', namespace='users'))
+    url(r'', include('users.urls', namespace='users')),
+    url(r'', include('songs.urls', namespace='songs'))
 ]
 
 """

@@ -7,7 +7,6 @@ from .models import User
 from .serializers import UserSerializer
 from .tasks import send_welcome_email
 from django.contrib.auth.models import User as DUser
-from utilities import sender_email
 
 class UsersCrud(APIView):
 
