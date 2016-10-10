@@ -1,8 +1,30 @@
-# Pusher
-# 
+# Pusher Settings
+PUSHER_APP_ID = "257181"
+PUSHER_APP_KEY = "574fe9df791589ba8b69"
+PUSHER_APP_SECRET = "7f08647e1f25d52dd90c"
+PUSHER_APP_SSL = True
+PUSHER_PUBLIC_CHANNEL = "mymusic_public"
+PUSHER_USER_CHANNEL = "mymusic_user_{user_id}"
+PUSHER_RATE_SOUND = "rate_sound"
+PUSHER_RATE_PLAYLIST = "rate_playlist"
 
-#DB
-DB_USER_NAME = "db"
+# DB DOCKER 
+DB_HOST = "db"
 DB_PORT = "5432"
 DB_NAME = "postgres"
 DB_USER = "postgres"
+
+#ALGOLIA SEARCH
+ALGOLIA_APPID = "4EDUOL7K8Z"
+ALGOLIA_SEARCHKEY = "eb6cb9d52265f96c4c67d801ccc846f3"
+ALGOLIA_APIKEY = "94e23d8771ff3c977f162fbab63e7531"
+ALGOLIA_INDEX_SOUNDS = "songs"
+
+# SendGrid
+SENDGRID_API_KEY = "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"
+SENDGRID_SENDER = 'einper40@gmail.com'
+
+
+# Rq
+REDIS_HOST = "redis"
+REDIS_PORT = 6379

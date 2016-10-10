@@ -13,9 +13,27 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from rest_framework_jwt.views import obtain_jwt_token
+
+from django.conf.urls import url, include
 from django.contrib import admin
 
+# Rest Framework Mapping
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+
 urlpatterns = [
+    url(r'^', include(router.urls)),
+    url(r'^django-rq/', include('django_rq.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^auth-token/', obtain_jwt_token),
+    url(r'', include('social.apps.django_app.urls', namespace='social')),
+    url(r'', include('users.urls', namespace='users')),
+    url(r'', include('songs.urls', namespace='songs')),
+    url(r'', include('playlist.urls', namespace='playlist'))
 ]
+
+"""
+curl -X POST -d "username=einper40@gmail.com&password=Linked" http://localhost:8080/auth-token/
+"""

@@ -10,3 +10,7 @@ python-social-auth
 algoliasearch
 rq
 pusher
+sendgrid
+redis
+django-rq
+django-cors-middleware
