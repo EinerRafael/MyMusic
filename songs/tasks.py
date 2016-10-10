@@ -1,4 +1,4 @@
-from utilities import redis_conn, push_notification
+from utilities import redis_conn, push_notification, algolia
 from rq.decorators import job
 from mymusic.constants import *
 
@@ -16,3 +16,14 @@ def send_notification_ratesound(user_id, song_id, rate):
         song_id: song_id,
         rate: rate
     })
+
+@job('default', connection=redis_conn)
+def send_data_to_algolia(index, data):
+    """
+    Envia una notificaion cuando se califica una cancion
+    :param user_id: Usuario a notificar
+    :param song_id: Cancion calificada
+    :param rate: Calificacion data por el usuario
+    :return:
+    """
+    return algolia.save_object(index=index, data=data)

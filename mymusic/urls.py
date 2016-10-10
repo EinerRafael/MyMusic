@@ -21,20 +21,19 @@ from django.contrib import admin
 # Rest Framework Mapping
 from rest_framework import routers
 
-##Import Views
 router = routers.DefaultRouter()
-#router.register(r'users', views.UsersView)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^django-rq/', include('django_rq.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^api/token-auth/', obtain_jwt_token),
+    url(r'^auth-token/', obtain_jwt_token),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
     url(r'', include('users.urls', namespace='users')),
-    url(r'', include('songs.urls', namespace='songs'))
+    url(r'', include('songs.urls', namespace='songs')),
+    url(r'', include('playlist.urls', namespace='playlist'))
 ]
 
 """
-curl -H 'Accept: application/json; indent=4' -u john:johnpassword http://127.0.0.1:8080/api/users/
+curl -X POST -d "username=einper40@gmail.com&password=Linked" http://localhost:8080/auth-token/
 """

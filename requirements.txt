@@ -13,3 +13,4 @@ pusher
 sendgrid
 redis
 django-rq
+django-cors-middleware

@@ -21,7 +21,6 @@ class Song(models.Model):
             'album': self.album,
             'artist': self.artist,
             'audio_path': self.audio_path,
-            'creator': self.creator.serialize(),
             'duration': self.duration
         }
 

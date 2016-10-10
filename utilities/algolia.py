@@ -20,4 +20,9 @@ class Algolia():
         :return: None
         """
         self.index = self.client.init_index(index)
-        self.index.add_objects(data)
+        self.index.add_objects([data])
+
+    def search(self, index, text):
+        self.client = algoliasearch.Client(ALGOLIA_APPID, ALGOLIA_SEARCHKEY)
+        self.index = self.client.init_index(index)
+        return self.index.search(text)
