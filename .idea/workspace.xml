@@ -2,8 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e1a1998-a173-4e40-a6aa-ee6bf8af7cbc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/mymusic.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mymusic/local_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/serializer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/0002_artist_artistimage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/0003_auto_20161009_2314.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/0004_song_rating.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/0005_song_creator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/0006_auto_20161010_0357.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/0007_song_artist.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/serializers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/songs/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/migrations/0002_auto_20161009_1749.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/migrations/0003_auto_20161009_1806.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/serializers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/algolia.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/push_notifications.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/rq_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/sendgrid_api.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/util.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rq.sh" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/songs/views.py" afterPath="$PROJECT_DIR$/songs/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mymusic/constants.py" afterPath="$PROJECT_DIR$/mymusic/constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mymusic/settings.py" afterPath="$PROJECT_DIR$/mymusic/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mymusic/urls.py" afterPath="$PROJECT_DIR$/mymusic/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.sh" afterPath="$PROJECT_DIR$/run.sh" />
     </list>
     <ignored path="mymusic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +95,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+            <state relative-caret-position="330">
+              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -141,76 +205,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="songs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="playlist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -231,27 +225,7 @@
       <recent name="$PROJECT_DIR$/utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: utilities">
-    <configuration default="false" name="Test: utilities" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mymusic" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="utilities" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -483,38 +457,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="mymusic" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mymusic" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Django server.mymusic" />
-      <item index="1" class="java.lang.String" itemvalue="Django tests.Test: utilities" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: utilities" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -687,7 +629,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -854,8 +798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+        <state relative-caret-position="330">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
           <folding />
         </state>
       </provider>
