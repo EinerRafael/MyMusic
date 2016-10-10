@@ -31,7 +31,7 @@ class UsersCrud(APIView):
             "password": "Linked",
             "image": "None"
         }
-        :param request: Por defecto Django Request
+        :param request: Objeto Request Por defecto Django Request
         :return: Response Object Django
         """
         serializer = UserSerializer(data=request.data)

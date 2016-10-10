@@ -12,6 +12,7 @@ class PlayList(models.Model):
     is_public = models.BooleanField(default=False)
 
     def serialize(self):
+        songs = [song.serialize() for song in PlayListSong.objects.filter(list=int(self.id))]
         return {
             'id': self.id,
             'name': self.name,
@@ -19,7 +20,8 @@ class PlayList(models.Model):
             'rate': self.rate,
             'gender': self.gender,
             'is_public': self.is_public,
-            'user': self.user.serialize()
+            'user': self.user.serialize(),
+            'songs': songs
         }
 
 class PlayListSong(models.Model):
@@ -27,6 +29,4 @@ class PlayListSong(models.Model):
     list = models.ForeignKey(PlayList)
 
     def serialize(self):
-        return {
-            'song': self.song.serialize()
-        }
+        return self.song.serialize()

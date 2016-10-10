@@ -10,18 +10,21 @@ from .models import PlayList, PlayListSong
 from .serializer import PlayListSerializer, PlayListSongSerializer
 from .tasks import send_create_playlist
 
+
 class PlayListCrud(APIView):
 
     def post(self, request):
         """
+        Permite adicionar una playList de un usuario.
+        Ejemplo Solicitud:
         {
             "user": 11,
             "name": "Vallenato Nuevo",
             "gender": "Vallenato",
             "description": ""
         }
-        :param request:
-        :return:
+        :param request: Objeto Request por defecto de DJango Restfrawmework
+        :return: Object Respuesta de Django Restfrawmework
         """
         serializer = PlayListSerializer(data=request.data)
         if not serializer.is_valid():
@@ -39,15 +42,46 @@ class PlayListCrud(APIView):
         return Response(new_playlist.serialize(), status=status.HTTP_201_CREATED)
 
 
+class PlayListGet(APIView):
+
+    def get(self, request, id):
+        """
+        Adquiere un playlist con id especifico
+        :param request: Objeto Request por defecto de DJango Restfrawmework
+        :param id: Identificador de la PlayList
+        :return: Object Respuesta de Django Restfrawmework
+        """
+        play_list = PlayList.objects.filter(id=int(id))
+        if len(play_list) is 0:
+            return Response("", status=status.HTTP_404_NOT_FOUND)
+        return Response(play_list[0].serialize(), status=status.HTTP_200_OK)
+
+class PlayListUser(APIView):
+
+    def get(self, request, id):
+        """
+        Adquiere un playlist con id de usuario especifico
+        :param request: Objeto Request por defecto de DJango Restfrawmework
+        :param id: Identificador del usuario
+        :return: Object Respuesta de Django Restfrawmework
+        """
+        play_lists = [pl.serialize() for pl in PlayList.objects.filter(user=int(id))]
+        if len(play_lists) is 0:
+            return Response("", status=status.HTTP_404_NOT_FOUND)
+        return Response(play_lists, status=status.HTTP_200_OK)
+
+
 class PlayListSongCrud(APIView):
     def post(self, request):
         """
+        Permite adiconar una cacion a una playlist.
+        Ejemplo Solicitud:
         {
             "song": 9,
             "list": 1
         }
-        :param request:
-        :return:
+        :param request: Objeto Request por defecto de DJango Restfrawmework
+        :return: Object Respuesta de Django Restfrawmework
         """
         serializer = PlayListSongSerializer(data=request.data)
         if not serializer.is_valid():
