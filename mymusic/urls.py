@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from rest_framework_jwt.views import obtain_jwt_token
-
+from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls.static import static
 
 # Rest Framework Mapping
 from rest_framework import routers
@@ -28,11 +29,11 @@ urlpatterns = [
     url(r'^django-rq/', include('django_rq.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^auth-token/', obtain_jwt_token),
-    url(r'', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^web/', include('web.urls')),
     url(r'', include('users.urls', namespace='users')),
     url(r'', include('songs.urls', namespace='songs')),
     url(r'', include('playlist.urls', namespace='playlist'))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 """
 curl -X POST -d "username=einper40@gmail.com&password=Linked" http://localhost:8080/auth-token/
