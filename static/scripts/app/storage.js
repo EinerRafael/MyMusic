@@ -17,6 +17,13 @@ angular.module("Storage", ['ngRoute']).factory("Storage", [function() {
 				return true;
 			}
 			return false;
+		},
+		'getToken': function(){
+			var sess = session_storage.getItem('session');
+		 	if (sess) {
+		 		return JSON.parse(sess)['token'];
+		 	}
+		 	return ""
 		}
 	}
 }]);

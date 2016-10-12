@@ -3,8 +3,8 @@ angular.module('Home').component("homeView", {
 		<h3>{{$ctrl.user.fullName()}}</h3>
         <span>{{$ctrl.user.email}}</span>
         <br />
-        <a href="#" class="btn btn-primary btn-lg">Canciones</a>
-        <a href="#" class="btn btn-success btn-lg">PlayList</a>
+        <a href="#!/home/songs/" class="btn btn-primary btn-lg">Canciones</a>
+        <a href="#!/home/playlists/" class="btn btn-success btn-lg">PlayList</a>
     `,
     controller: ['Consumer', 'Storage', '$location', 'Config', function(Consumer, Storage, $location, Config) {
         var self = this;
