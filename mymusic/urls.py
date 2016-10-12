@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^django-rq/', include('django_rq.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^auth-token/', obtain_jwt_token),
+    url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^web/', include('web.urls')),
     url(r'', include('users.urls', namespace='users')),
     url(r'', include('songs.urls', namespace='songs')),

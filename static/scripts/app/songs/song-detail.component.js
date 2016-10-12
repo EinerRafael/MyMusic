@@ -1,6 +1,6 @@
 angular.module('songsList').component('songDetail', {
     template: `
-		<div class="panel panel-default">
+		<div class="panel panel-info">
 			<div class="panel-heading">{{ $ctrl.data.name}}</div>
 			<div class="panel-body">
 				<ul>
