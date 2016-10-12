@@ -19,6 +19,8 @@ class SongsCrud(APIView):
     authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
 
     def get(self, request):
+        """
+        """
         songs = [song.serialize() for song in Song.objects.all()]
         return Response(songs)
 
