@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from rest_framework.authentication import BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -10,8 +13,22 @@ from .models import PlayList, PlayListSong
 from .serializer import PlayListSerializer, PlayListSongSerializer
 from .tasks import send_create_playlist
 
+class PublicPlayList(APIView):
+    """docstring for PublicPlayList"""
+    def get(self, request):
+        """
+            Retorna todas plas playList Publicas
+        """
+        play_lists = [pl.serialize() for pl in PlayList.objects.filter(is_public=True)]
+        if len(play_lists) is 0:
+            return Response("", status=status.HTTP_404_NOT_FOUND)
+        return Response(play_lists, status=status.HTTP_200_OK)
+        
 
 class PlayListCrud(APIView):
+
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
 
     def post(self, request):
         """
@@ -21,7 +38,8 @@ class PlayListCrud(APIView):
             "user": 11,
             "name": "Vallenato Nuevo",
             "gender": "Vallenato",
-            "description": ""
+            "description": "",
+            "is_public": 0
         }
         :param request: Objeto Request por defecto de DJango Restfrawmework
         :return: Object Respuesta de Django Restfrawmework
@@ -36,6 +54,7 @@ class PlayListCrud(APIView):
             description=data['description'],
             gender=data['gender'],
             user=user,
+            is_public=data['is_public']
         )
         new_playlist.save()
         send_create_playlist.delay(new_playlist)
@@ -43,6 +62,8 @@ class PlayListCrud(APIView):
 
 
 class PlayListGet(APIView):
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
 
     def get(self, request, id):
         """
@@ -57,6 +78,8 @@ class PlayListGet(APIView):
         return Response(play_list[0].serialize(), status=status.HTTP_200_OK)
 
 class PlayListUser(APIView):
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
 
     def get(self, request, id):
         """
@@ -72,6 +95,9 @@ class PlayListUser(APIView):
 
 
 class PlayListSongCrud(APIView):
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
+
     def post(self, request):
         """
         Permite adiconar una cacion a una playlist.

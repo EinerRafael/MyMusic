@@ -45,15 +45,12 @@ _REST_FRAMEWORK = {
 
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': timedelta(days=1),
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.views.jwt_response_payload_handler',
 }
 
+
+
 AUTHENTICATION_BACKENDS = (
-    'social.backends.open_id.OpenIdAuth',
-    'social.backends.google.GoogleOpenId',
-    'social.backends.google.GoogleOAuth2',
-    'social.backends.google.GoogleOAuth',
-    'social.backends.twitter.TwitterOAuth',
-    'social.backends.yahoo.YahooOpenId',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -83,3 +80,12 @@ CORS_ALLOW_HEADERS = (
 )
 
 CORS_URLS_REGEX = r'^/api/.*$'
+
+
+FACEBOOK_APP_ID              = '353258371678607'
+FACEBOOK_API_SECRET          = '53b3d718fc8908561e7b57ade780ad5e'
+
+
+LOGIN_URL          = '/login-form/'
+LOGIN_REDIRECT_URL = '/logged-in/'
+LOGIN_ERROR_URL    = '/login-error/'

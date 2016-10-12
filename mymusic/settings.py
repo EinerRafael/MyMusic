@@ -38,13 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social.apps.django_app.default',
+    #'social_auth',
     'rest_framework',
     'corsheaders',
     'django_rq',
     'users',
     'songs',
     'playlist',
+    'web'
 ]
 
 MIDDLEWARE = [
@@ -64,7 +65,9 @@ ROOT_URLCONF = 'mymusic.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,6 +124,13 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 from .local_settings import *
 

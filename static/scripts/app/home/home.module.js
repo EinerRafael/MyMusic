@@ -1,0 +1,1 @@
+angular.module('Home', ['ngRoute', 'Consumer', 'Storage', 'Config']);

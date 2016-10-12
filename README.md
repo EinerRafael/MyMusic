@@ -4,7 +4,7 @@ Permite a los usuarios adicionar musica y playlists.
 
   - Utiliza Notificaciones en Tiempo Real
   - Permite Enviar Correos
-  - Indexacion en Motor de busqueda
+  - Indexación en Motor de busqueda
 
 Para Usarlo
 
@@ -21,3 +21,7 @@ $ docker exec -it mymusic_web /bin/bash
 # ./manage.py makemigrations
 # ./manage.py migrate
 ```
+
+Uso de la Aplicacion Web: /web/index
+
+Permite interacturar con los servicios.

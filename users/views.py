@@ -8,9 +8,16 @@ from .serializers import UserSerializer
 from .tasks import send_welcome_email
 from django.contrib.auth.models import User as DUser
 
+def jwt_response_payload_handler(token, user=None, request=None):
+    guser = User.objects.get(email=user);
+    return {
+        'token': token,
+        'user': guser.serialize()
+    }
+
 class UsersCrud(APIView):
 
-    def get(self, request):
+    def _get(self, request):
         """
         Lista todos los usuarios
         :param request:
@@ -47,3 +54,4 @@ class UsersCrud(APIView):
         send_welcome_email.delay(user_new.email)
         return Response(user_new.serialize(), status=status.HTTP_201_CREATED)
 
+        

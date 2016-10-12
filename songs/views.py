@@ -15,10 +15,12 @@ from users.models import User
 from utilities import algolia
 
 class SongsCrud(APIView):
-    #permission_classes = (IsAuthenticated,)
-    #authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
 
     def get(self, request):
+        """
+        """
         songs = [song.serialize() for song in Song.objects.all()]
         return Response(songs)
 
@@ -63,8 +65,8 @@ class SongsSearch(APIView):
 
 
 class SongsRateCrud(APIView):
-    #permission_classes = (IsAuthenticated,)
-    #authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (JSONWebTokenAuthentication, BasicAuthentication)
 
     def post(self, request):
         """
